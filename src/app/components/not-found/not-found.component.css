@@ -1,0 +1,8 @@
+.btn-lila-medio{
+    background-color: var(--lila-oscuro);
+    color: var(--texto-claro);
+}
+.btn-lila-medio:hover{
+    background-color: var(--lila-medio);
+    color: var(--texto-claro);
+}

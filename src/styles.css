@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+*{  
+    --lila-medio:#8660E2;
+    --texto-claro:#EFEFEF;
+    --lila-oscuro:#24245B;
+}
