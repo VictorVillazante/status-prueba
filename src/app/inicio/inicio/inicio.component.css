@@ -1,0 +1,204 @@
+#banner-inicio {
+    width: 100vw;
+    height: 800px;
+    background-image: url("../../../assets/images/img_inicio/img_inicio.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 122px;
+}
+
+#banner-inicio h1,
+h2 {
+    color: var(--texto-claro);
+    font-weight: 700;
+    line-height: normal;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+#banner-inicio h1 {
+    font-size: 64px;
+    margin-bottom: 25px;
+}
+
+#banner-inicio h2 {
+    font-size: 34px;
+}
+
+.caracteristicas {
+    padding: 20px 0 20px 0;
+    display: flex;
+    width: 600px;
+    border-radius: 25px;
+    background: #FFF;
+    flex-direction: row;
+    text-align: start;
+    align-items: center;
+    margin: 20px 81px 20px 81px;
+}
+
+#caracteriticas-container {
+    display: flex;
+    text-align: center;
+    background: var(--lila-oscuro);
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100vw;
+    margin: 0;
+}
+
+.caracteristicas-contenido h3 {
+    color: var(--lila-oscuro);
+}
+
+.caracteristicas-contenido p {
+    font-weight: 700;
+}
+
+.caracteristicas-contenido a.btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--texto-claro);
+    background-color: var(--lila-oscuro);
+
+}
+
+.caracteristicas-contenido .button {
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 10px;
+}
+
+.caracteristicas-img {
+    width: 40%;
+    text-align: center;
+}
+
+@media (max-width: 990px) {
+    #banner-inicio {
+        padding: 0 10px 0 10px;
+        height: 600px;
+    }
+
+    #banner-inicio h1 {
+        font-size: 48px;
+    }
+
+    #banner-inicio h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* Perfiles */
+ .card{
+    height: 450px !important;
+    margin-right: 45px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card img{
+    height: 240px;
+}
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 5px 10px 5px;
+}
+.card:hover .card-footer{
+   color: var(--texto-claro);
+   background-color: var(--lila-oscuro);
+}
+.card:hover{
+    box-shadow: 0px 0px 12px var(--lila-medio);
+  
+}
+.card-footer img{
+    width: auto;
+    height: 100%;
+  
+}
+.opciones {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.perfiles button {
+    background: var(--lila-oscuro);
+    color: var(--texto-claro);
+    margin: 10px 32px 10px 0;
+    width: auto;
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+.mas-perfiles{
+    display: flex;
+    justify-content: center;
+}
+.mas-perfiles button {
+    border-radius: 10px;
+}
+/* Status card */
+.status-card {
+    background-color: var(--gray-status);
+}
+
+.status-card-img {
+    width: 40%;
+    height: 380px;
+    background-image: url("../../../assets/images/img_inicio/status_card.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.status-card-descripcion {
+    width: 60%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    padding-left: 5%;
+}
+
+.status-card-descripcion h3 {
+    font-size: 36px;
+    font-weight: 700;
+    height: 70px;
+}
+
+.status-card-descripcion p {
+    font-size: 20px;
+}
+
+.status-card-descripcion div ul {
+    padding-left: 5%;
+    font-size: 20px;
+}
+
+@media (max-width: 990px) {
+    .status-card-img {
+        width: 100vw;
+    }
+
+    .status-card-descripcion {
+        width: 100vw;
+    }
+
+}

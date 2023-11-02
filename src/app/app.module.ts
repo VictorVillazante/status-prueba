@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+import { InicioComponent } from './inicio/inicio/inicio.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CarouselModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<div id="banner-inicio">
+  <h1>Tu puerta al futuro legal</h1>
+  <h2>Encuentra información legal, contactos y oportunidades</h2>
+</div>
+<div class="row" id="caracteriticas-container">
+  <div *ngFor="let c of caracteristicas_status" class="caracteristicas">
+    <div class="caracteristicas-img">
+      <img [src]="c.img_caracteristica" alt="" />
+    </div>
+    <div class="caracteristicas-contenido">
+      <h3>{{ c.titulo }}</h3>
+      <p>{{ c.descripcion }}</p>
+      <div class="button">
+        <a class="btn">Más información</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="perfiles">
+  <div class="opciones row">
+    <button id="btn-todos" (click)="filtrarPerfiles('todos')">Todos</button>
+    <button id="btn-bolivia" (click)="filtrarPerfiles('bolivia')">Bolivia</button>
+    <button id="btn-argentina" (click)="filtrarPerfiles('argentina')">Argentina</button>
+  </div>
+  <div class="carousel">
+    <carousel
+      id="carousel-recientes"
+      class=""
+      [itemsPerSlide]="itemsEnCarrusel"
+      [showIndicators]="false"
+      [singleSlideOffset]="true"
+      [noWrap]="true"
+      [interval]="0"
+      [startFromIndex]="5"
+    >
+      <slide
+        *ngFor="let perfil of perfilesAux; let index = index"
+        [tabIndex]="index"
+      >
+        <div class="col">
+          <div class="card">
+            <img src="{{ perfil.imageUrl }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ perfil.name }}</h5>
+              <div id="descripcion">
+                <p>
+                  {{ perfil.country }}
+                </p>
+              </div>
+            </div>
+            <div class="card-footer">
+              Ver perfil
+              <img src="../../../assets/images/img_inicio/double-right-bg-light.png" alt=""> 
+            </div>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+  <div class="mas-perfiles">
+    <button class="">Más información</button>
+  </div>
+</div>
+<div class="status-card row">
+  <div class="status-card-img"></div>
+  <div class="status-card-descripcion">
+    <h3>¿Qué es la Status Card?</h3>
+    <div>
+      <p>
+        Es una tarjeta que lleva a tu perfil profesional y te conecta con un
+        mundo de ventajas:
+      </p>
+      <ul>
+        <li>
+          Encuentra clientes, pasantías y oportunidades laborales desde tu
+          perfil.
+        </li>
+        <li>
+          Publica artículos en la Revista Jurídica y recibe tu boletín legal.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
