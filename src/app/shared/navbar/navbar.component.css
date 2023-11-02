@@ -2,6 +2,9 @@
     background-color: var(--lila-oscuro);
     padding: 10px 64px 10px 64px;
     min-height: 64px;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
 }
 
 a {
@@ -16,6 +19,13 @@ a {
 .btn-lila-medio {
     background-color: var(--lila-medio);
     color: var(--texto-claro);
+}
+.btn-lila-medio:hover {
+    background-color: var(--lila-medio);
+    color: var(--texto-claro);
+}
+.navbar-toggler{
+    border: none !important;
 }
 
 .collapse {

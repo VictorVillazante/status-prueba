@@ -4,3 +4,8 @@
     --texto-claro:#EFEFEF;
     --lila-oscuro:#24245B;
 }
+html{
+    width: 100vw;
+}
+
+
