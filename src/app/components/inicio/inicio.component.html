@@ -1,1 +1,17 @@
-<p>inicio works!</p>
+<app-navbar></app-navbar>
+<div id="banner-inicio">
+    <h1>Tu puerta al futuro legal</h1>
+    <h2>Encuentra información legal, contactos y oportunidades</h2>
+</div>
+<div class="row">
+    <div *ngFor="let c of caracteristicas_status" class="caracteristicas">
+        <div class="caracteristicas-img">
+            <img [src]="c.img_caracteristica" alt="">
+        </div>
+        <div class="caracteristicas-contenido">
+            <h3>{{c.titulo}}</h3>
+            <p>{{c.descripcion}}</p>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+#banner-inicio {
+    width: 100vw;
+    height: 650px;
+    background-image: url("../../../assets/images/img_inicio/img_inicio.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 122px;
+}
+#banner-inicio h1,h2{
+    color: var(--texto-claro);
+    font-weight: 700;
+    line-height: normal;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+#banner-inicio h1{
+    font-size: 64px;
+    margin-bottom: 25px;
+}
+#banner-inicio h2{
+    font-size: 34px;
+}
