@@ -24,12 +24,10 @@ h2 {
     margin-bottom: 25px;
 }
 #banner-inicio h2 {
-    /* animation: mymove 5s infinite; */
     background-size: 400% !important;
     -webkit-background-clip: text !important;
     letter-spacing: 2px;
     word-spacing: 5px;
-    /* -webkit-text-stroke: 1px rgba(126, 126, 126, 0.692); */
     animation: typing 4s steps(1000) 0s 1 normal both;
     animation-delay: 0 !important;
     position: absolute;

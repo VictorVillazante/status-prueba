@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Profile } from 'src/app/models/Profile';
 import { PerfilesService } from '../../services/perfiles.service';
 
 @Component({
@@ -70,21 +71,16 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerPerfiles();
   }
-  perfiles: any[] = [];
+  perfiles: Profile[] = [];
   itemsEnCarrusel: number = 4;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.obtenerAnchoPantalla();
-    // this.obtenerAnchoPantalla();
-    // this.filtrarPerfiles(this.elegido);
-    // this.filtrarPerfiles(this.elegido);
-
   }
 
   obtenerAnchoPantalla() {
     let screenWidth = window.innerWidth;
-    console.log(screenWidth);
     if (screenWidth > 1100) {
       this.obtenerPerfiles();
       this.itemsEnCarrusel = 4;
@@ -105,9 +101,8 @@ export class InicioComponent implements OnInit {
         }
       }
     }
-    console.log(this.itemsEnCarrusel)
   }
-  perfilesAux: any = [];
+  perfilesAux: Profile[] = [];
   obtenerPerfiles() {
     this.perfilesService.obtenerPerfiles().subscribe((data) => {
       this.perfiles = data;
