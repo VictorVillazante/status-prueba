@@ -4,7 +4,7 @@
     min-height: 64px;
     z-index: 2;
     position: fixed;
-    width: 100vw;
+    width: 99vw;
 }
 
 a {
@@ -52,9 +52,20 @@ a {
 
 .nav-item {
     margin-right: 20px !important;
-    padding: 0 !important;
+    padding: 5px !important;
     display: flex;
     align-items: center;
+    transition-duration: 2s;
+}
+.nav-item:hover{
+    background-color: var(--texto-claro);
+    color: var(--lila-oscuro) !important;
+    border-radius: 10px;
+    transition-duration: 2s;
+
+}
+.nav-item:hover a{
+    color: var(--lila-oscuro) !important;
 }
 
 @media (max-width: 1200px) {
@@ -69,7 +80,7 @@ a {
     .nav-item {
         padding: 10px !important;
     }
-
+ 
 }
 
 @media (max-width: 990px) {

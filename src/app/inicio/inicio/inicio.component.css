@@ -76,6 +76,17 @@ h2 {
     text-align: start;
     align-items: center;
     margin: 20px 81px 20px 81px;
+    animation: caracteristicas 4s 1 normal;
+
+}
+@keyframes caracteristicas {
+  from {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 #caracteriticas-container {
@@ -121,24 +132,39 @@ h2 {
 
 @media (max-width: 990px) {
     #banner-inicio {
-        padding: 0 10px 0 10px;
+        padding: 0 40px 0 10px;
         height: 600px;
     }
 
     #banner-inicio h1 {
         font-size: 48px;
+        padding: 0 40px 0 10px;
     }
 
     #banner-inicio h2 {
         font-size: 20px;
+        padding: 0 40px 0 10px;
+    }
+    .caracteristicas-img {
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
+}
+@media (max-width:1600px){
+    .caracteristicas{
+        width: 400px !important;
+        margin: 20px 20px 20px 20px;
+    }
 }
 
 /* Perfiles */
  .card{
     height: 450px !important;
-    margin-right: 45px;
+    margin-right: 20px;
+    margin-left: 20px;
+
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -193,6 +219,8 @@ h2 {
 /* Status card */
 .status-card {
     background-color: var(--gray-status);
+    width: 100vw !important;
+    margin: 0;
 }
 
 .status-card-img {
@@ -211,7 +239,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     font-family: 'Lato', sans-serif;
-    padding-left: 5%;
 }
 
 .status-card-descripcion h3 {
