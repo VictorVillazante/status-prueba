@@ -19,11 +19,48 @@ h2 {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
 }
-
 #banner-inicio h1 {
-    font-size: 64px;
+    font-size: 62px;
     margin-bottom: 25px;
 }
+#banner-inicio h2 {
+    /* animation: mymove 5s infinite; */
+    background-size: 400% !important;
+    -webkit-background-clip: text !important;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    /* -webkit-text-stroke: 1px rgba(126, 126, 126, 0.692); */
+    animation: typing 4s steps(1000) 0s 1 normal both;
+    animation-delay: 0 !important;
+    position: absolute;
+    top: 0;
+  }
+  #banner-inicio div{
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    animation: typing2 4s 1 normal;
+
+  }
+  @keyframes typing2 {
+    from {
+        height: 40px;
+    }
+  
+    to {
+        height: 150px;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
 
 #banner-inicio h2 {
     font-size: 34px;

@@ -8,21 +8,48 @@ import { PerfilesService } from '../../services/perfiles.service';
 })
 export class InicioComponent implements OnInit {
   filtrarPerfiles(nombre: String) {
+    let id="";
     switch (nombre) {
       case "todos":
-        this.perfilesAux=this.perfiles;
+        id="btn-todos";
+        this.perfilesAux=this.perfiles;  
         break;
       case "bolivia":
+        id="btn-bolivia";
         this.perfilesAux=this.perfiles;
         this.perfilesAux=this.perfilesAux.filter((p:any)=>p.country=="Bolivia")
         break;
       case "argentina":
+        id="btn-argentina";
         this.perfilesAux=this.perfiles;
         this.perfilesAux=this.perfilesAux.filter((p:any)=>p.country=="Argentina")
         break;
     }
-    console.log(this.perfilesAux);
-    console.log(this.perfiles);
+    this.cambiarColorOpciones(id);
+    this.obtenerAnchoPantalla();
+
+  }
+  cambiarColorOpciones(id: string) {
+    let boton = document.getElementById("btn-todos");
+    if(boton){
+      boton.style.backgroundColor = "#C6C1E4";
+      boton.style.color = "#24245B";
+    }
+    boton = document.getElementById("btn-bolivia");
+    if(boton){
+      boton.style.backgroundColor = "#C6C1E4";
+      boton.style.color = "#24245B";
+    }
+    boton = document.getElementById("btn-argentina");
+    if(boton){
+      boton.style.backgroundColor = "#C6C1E4";
+      boton.style.color = "#24245B";
+    }
+    boton = document.getElementById(id);
+    if(boton){
+      boton.style.backgroundColor = "#54528F";
+      boton.style.color = "#EFEFEF";
+    }
   }
 
   readonly caracteristicas_status = [
@@ -44,42 +71,43 @@ export class InicioComponent implements OnInit {
   }
   perfiles: any[] = [];
   itemsEnCarrusel: number = 4;
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.obtenerAnchoPantalla();
-
   }
+
   obtenerAnchoPantalla() {
     let screenWidth = window.innerWidth;
+    console.log(screenWidth);
     if (screenWidth > 1100) {
+      this.perfilesAux=this.perfilesAux;
       this.itemsEnCarrusel = 4;
-      this.obtenerPerfiles();
-
     } else {
       if (screenWidth > 900) {
+        this.perfilesAux=this.perfilesAux;
         this.itemsEnCarrusel = 3;
-        this.obtenerPerfiles();
 
       } else {
         if (screenWidth > 700) {
+          this.perfilesAux=this.perfilesAux;
           this.itemsEnCarrusel = 2;
-          this.obtenerPerfiles();
 
         } else {
+          this.perfilesAux=this.perfilesAux;
           this.itemsEnCarrusel = 1;
-          this.obtenerPerfiles();
 
         }
       }
     }
-
+console.log(this.itemsEnCarrusel)
   }
   perfilesAux:any=[];
   obtenerPerfiles() {
     this.perfilesService.obtenerPerfiles().subscribe((data) => {
-      console.log(data);
       this.perfiles = data;
       this.perfilesAux=data;
+      this.filtrarPerfiles("todos");
     })
   }
 }
